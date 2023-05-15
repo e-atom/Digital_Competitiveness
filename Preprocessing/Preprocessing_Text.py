@@ -143,7 +143,7 @@ def Preprocessor_sub(table):
 def ExcelWriter(df1,df2,df3,df4,df5):
     
     # create a writer object for the Excel workbook
-    writer = pd.ExcelWriter('IMD_digital_competencies.xlsx')
+    writer = pd.ExcelWriter('GitHub/Digital_Competitiveness/Data/IMD_digital_competencies.xlsx')
     
     #Add the files into the Excelsheet
     df1.to_excel(writer, sheet_name='Overall', index=False)
@@ -157,7 +157,8 @@ def ExcelWriter(df1,df2,df3,df4,df5):
 
 ##########################################################################################
 
-#Execute Functions and Preprocess Table
+#Define File
+file ="GitHub/Digital_Competitiveness/Data/Digital Ranking 2022.pdf"
 
 #Pass read_file function to fetch table
 Overall, Knowledge = Preprocessor(read_file(file, 39, "Argentina", "OVERALL"))
